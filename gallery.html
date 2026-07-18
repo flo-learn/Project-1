@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A colourful collection of ideas and moments." />
+    <title>Gallery · Hello, World!</title>
+    <style>
+      :root { color-scheme: dark; --ink: #f6f7ff; --muted: #b9bed9; --line: rgba(255,255,255,.14); }
+      * { box-sizing: border-box; }
+      body { min-height: 100vh; margin: 0; padding: 6.5rem 1.25rem 3rem; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: var(--ink); background: radial-gradient(circle at 10% 12%, #5533b7 0, transparent 28rem), radial-gradient(circle at 88% 70%, #007f86 0, transparent 28rem), linear-gradient(135deg,#101327,#1b1440 50%,#071d2c); }
+      nav { position: fixed; top: 1.4rem; left: 50%; transform: translateX(-50%); display: flex; gap: .35rem; padding: .35rem; border: 1px solid var(--line); border-radius: 999px; background: rgba(13,17,43,.7); backdrop-filter: blur(14px); z-index: 2; }
+      nav a { padding: .5rem .85rem; border-radius: 999px; color: var(--muted); font-size: .9rem; font-weight: 700; text-decoration: none; } nav a:hover, nav a[aria-current="page"] { color: var(--ink); background: rgba(255,255,255,.12); }
+      main { width: min(100%, 1100px); margin: auto; animation: appear .7s ease both; }
+      .intro { margin: 0 0 2rem; text-align: center; } .eyebrow { color: #87f8e7; font-size: .82rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; } h1 { margin: .65rem 0 .8rem; font-size: clamp(3rem,8vw,5.8rem); letter-spacing: -.07em; line-height: 1; } p { max-width: 38rem; margin: auto; color: var(--muted); font-size: 1.08rem; line-height: 1.65; }
+      .gallery { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 110px; gap: 1rem; }
+      .tile { position: relative; overflow: hidden; display: flex; align-items: end; padding: 1.25rem; border: 1px solid var(--line); border-radius: 20px; text-decoration: none; color: white; isolation: isolate; transition: transform .22s ease, border-color .22s ease; }
+      .tile::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .96; transition: transform .3s ease; } .tile:hover { transform: translateY(-5px); border-color: rgba(255,255,255,.42); } .tile:hover::before { transform: scale(1.08); }
+      .tile strong { font-size: 1.2rem; letter-spacing: -.03em; } .tile span { display: block; margin-top: .2rem; color: rgba(255,255,255,.76); font-size: .85rem; }
+      .one { grid-column: span 7; grid-row: span 3; } .one::before { background: radial-gradient(circle at 75% 25%, #ffdf8f 0, transparent 22%), linear-gradient(135deg,#ff4d8d,#7d42d8 65%,#252061); }
+      .two { grid-column: span 5; grid-row: span 3; } .two::before { background: radial-gradient(circle at 25% 22%, #b8fff4 0, transparent 19%), linear-gradient(145deg,#057d82,#163657 65%,#251452); }
+      .three { grid-column: span 4; grid-row: span 2; } .three::before { background: linear-gradient(135deg,#ffb447,#e75162 55%,#682e85); }
+      .four { grid-column: span 4; grid-row: span 2; } .four::before { background: radial-gradient(circle at 50% 40%,#e5c7ff 0,transparent 23%),linear-gradient(130deg,#6143b3,#1e4a85); }
+      .five { grid-column: span 4; grid-row: span 2; } .five::before { background: radial-gradient(circle at 65% 35%,#b6ff9a 0,transparent 18%),linear-gradient(135deg,#138777,#16334f 64%,#30235b); }
+      @keyframes appear { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+      @media (max-width: 650px) { body { padding-top: 6.5rem; } nav a { padding: .48rem .55rem; font-size: .8rem; } .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 125px; } .one,.two,.three,.four,.five { grid-column: span 2; grid-row: span 2; } .three,.four,.five { grid-row: span 1; } }
+    </style>
+  </head>
+  <body>
+    <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="gallery.html" aria-current="page">Gallery</a><a href="contact.html">Contact</a></nav>
+    <main>
+      <header class="intro"><div class="eyebrow">Curated moments</div><h1>Colour in motion.</h1><p>A small collection of vivid, abstract scenes. Each tile is a little window into a different mood.</p></header>
+      <section class="gallery" aria-label="Image gallery">
+        <a class="tile one" href="#sunset"><div><strong>Electric sunset</strong><span>Warm light, bold energy</span></div></a>
+        <a class="tile two" href="#tide"><div><strong>Midnight tide</strong><span>Calm beneath the current</span></div></a>
+        <a class="tile three" href="#bloom"><div><strong>Bloom</strong><span>Joyful colour</span></div></a>
+        <a class="tile four" href="#dream"><div><strong>Daydream</strong><span>Soft focus</span></div></a>
+        <a class="tile five" href="#canopy"><div><strong>Canopy</strong><span>Fresh perspective</span></div></a>
+      </section>
+    </main>
+  </body>
+</html>
