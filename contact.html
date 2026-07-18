@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get in touch." />
+    <title>Contact · Hello, World!</title>
+    <style>
+      :root { color-scheme:dark; --ink:#f6f7ff; --muted:#b9bed9; --line:rgba(255,255,255,.14); } *{box-sizing:border-box} body{min-height:100vh;margin:0;padding:6.5rem 1.25rem 2rem;font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 15%,#5533b7 0,transparent 30rem),radial-gradient(circle at 90% 80%,#007f86 0,transparent 28rem),linear-gradient(135deg,#101327,#1b1440 50%,#071d2c)} nav{position:fixed;top:1.4rem;left:50%;transform:translateX(-50%);display:flex;gap:.35rem;padding:.35rem;border:1px solid var(--line);border-radius:999px;background:rgba(13,17,43,.6);backdrop-filter:blur(14px)}nav a{padding:.5rem .85rem;border-radius:999px;color:var(--muted);font-size:.9rem;font-weight:700;text-decoration:none}nav a:hover,nav a[aria-current="page"]{color:var(--ink);background:rgba(255,255,255,.12)} main{width:min(100%,760px);margin:auto;padding:clamp(2rem,6vw,4.5rem);border:1px solid var(--line);border-radius:28px;background:rgba(13,17,43,.5);box-shadow:0 30px 80px rgba(0,0,0,.35);backdrop-filter:blur(18px);animation:appear .7s ease both}.eyebrow{color:#87f8e7;font-weight:800;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}h1{margin:.7rem 0 1rem;font-size:clamp(2.8rem,8vw,5.5rem);letter-spacing:-.065em;line-height:1}p{color:var(--muted);font-size:1.1rem;line-height:1.7}form{display:grid;gap:1rem;margin-top:2rem}label{display:grid;gap:.45rem;color:#dfe2fa;font-weight:700}input,textarea{width:100%;padding:.9rem 1rem;border:1px solid var(--line);border-radius:12px;outline:none;background:rgba(255,255,255,.07);color:var(--ink);font:inherit}input:focus,textarea:focus{border-color:#72e9da;box-shadow:0 0 0 3px rgba(114,233,218,.16)}textarea{min-height:7rem;resize:vertical}button{justify-self:start;padding:.85rem 1.3rem;border:0;border-radius:12px;background:linear-gradient(135deg,#8a68ff,#34d6c2);color:#071328;font:inherit;font-weight:800;cursor:pointer;transition:transform .18s ease}button:hover{transform:translateY(-3px)}@keyframes appear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+    </style>
+  </head>
+  <body>
+    <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a></nav>
+    <main>
+      <div class="eyebrow">Say hello</div>
+      <h1>Let’s connect.</h1>
+      <p>Have an idea, a question, or simply want to say hi? Leave a note below.</p>
+      <form action="#" method="post">
+        <label>Name <input name="name" type="text" placeholder="Your name" required /></label>
+        <label>Email <input name="email" type="email" placeholder="you@example.com" required /></label>
+        <label>Message <textarea name="message" placeholder="What’s on your mind?" required></textarea></label>
+        <button type="submit">Send message →</button>
+      </form>
+    </main>
+  </body>
+</html>

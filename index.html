@@ -29,6 +29,21 @@
           linear-gradient(135deg, #101327 0%, #1b1440 50%, #071d2c 100%);
       }
 
+      nav {
+        position: fixed;
+        top: 1.4rem;
+        display: flex;
+        gap: 0.35rem;
+        padding: 0.35rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(13, 17, 43, 0.46);
+        backdrop-filter: blur(14px);
+        z-index: 1;
+      }
+      nav a { padding: 0.5rem 0.85rem; border-radius: 999px; color: var(--muted); font-size: 0.9rem; font-weight: 700; text-decoration: none; }
+      nav a:hover, nav a[aria-current="page"] { color: var(--ink); background: rgba(255,255,255,.12); }
+
       .orb {
         position: fixed;
         width: 18rem;
@@ -105,11 +120,16 @@
   <body>
     <div class="orb one" aria-hidden="true"></div>
     <div class="orb two" aria-hidden="true"></div>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
     <main>
       <div class="eyebrow"><span class="dot"></span> System online</div>
       <h1>Hello, World!</h1>
       <p>A small beginning with a little extra sparkle. Your new web page is ready for whatever comes next.</p>
-      <a class="button" href="#hello">Start exploring →</a>
+      <a class="button" href="about.html">Meet the project →</a>
     </main>
   </body>
 </html>
